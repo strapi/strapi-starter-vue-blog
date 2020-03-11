@@ -22,5 +22,6 @@
   },
   "dependencies": {
     "moment": "^2.24.0"
-  }
+  },
+  "license": "MIT"
 }
