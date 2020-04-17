@@ -1,0 +1,7 @@
+[build]
+  base = "frontend/"
+  publish = "dist/"
+  command = "yarn build"
+
+[template.environment]
+  VUE_APP_STRAPI_API_URL = "API_URL"
