@@ -10,7 +10,8 @@
         >
           <div class="uk-card uk-card-muted">
             <div class="uk-card-media-top">
-              <img :src="api_url + article.image.url" alt="" height="100" />
+              <img :src="article.image.url" v-if="state === 'production'" alt="" height="100" />
+              <img :src="api_url + article.image.url" v-else alt="" height="100" />
             </div>
             <div class="uk-card-body">
               <p
@@ -35,7 +36,8 @@
           >
             <div class="uk-card uk-card-muted">
               <div class="uk-card-media-top">
-                <img :src="api_url + article.image.url" alt="" height="100" />
+                <img :src="article.image.url" v-if="state === 'production'" alt="" height="100" />
+                <img :src="api_url + article.image.url" v-else alt="" height="100" />
               </div>
               <div class="uk-card-body">
                 <p
@@ -59,7 +61,8 @@
 export default {
   data: function() {
     return {
-      api_url: process.env.VUE_APP_STRAPI_API_URL || "http://localhost:1337"
+      api_url: process.env.VUE_APP_STRAPI_API_URL || "http://localhost:1337",
+      state: process.env.NODE_ENV
     };
   },
   props: {
