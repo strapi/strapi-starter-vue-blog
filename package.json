@@ -16,7 +16,7 @@
     "core-js": "^3.6.4",
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
-    "moment": "^2.24.0",
+    "moment": "^2.27.0",
     "vue": "^2.6.11",
     "vue-apollo": "^3.0.3",
     "vue-markdown-it": "^0.9.4",
